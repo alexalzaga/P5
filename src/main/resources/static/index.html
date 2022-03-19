@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+	<title>Pokémon Search Tool</title>
+	    <!-- Bootstrap core CSS -->
+	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/dist/css/style.css" rel="stylesheet">
+
+		<!-- carga de custom font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		body {
+		  font-family: Verdana;
+		  max-width: 100%;
+    	  overflow-x: hidden;
+		}
+
+		p {
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+	<a class="btn btn-outline-light bg-primary mt-2 registro" id="btn-registro" href="registro.html">Registrarse</a>
+	<!--Logo-->
+	<img class="logo" src="resources/logo.png">
+	<header class="head rounded-pill border border-3">
+		<h1>
+			Search Tool
+		</h1>
+	</header>
+	<div class="buffer"></div>
+	<!--Menu seleccion gen + busqueda-->
+	<div class="container cont-1 border border-3 mb-2 text-center">
+		<div class="btn-group my-2" role="group" id="gen-select">
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen1" autocomplete="off" checked>
+		  <label class="btn btn-outline-primary" for="btnGen1">Gen 1</label>
+
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen2" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnGen2">Gen 2</label>
+
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen3" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnGen3">Gen 3</label>
+
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen4" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnGen4">Gen 4</label>
+
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen5" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnGen5">Gen 5</label>
+
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen6" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnGen6">Gen 6</label>
+
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen7" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnGen7">Gen 7</label>
+
+		  <input type="radio" class="btn-check" name="btnradio" id="btnGen8" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnGen8">Gen 8</label>
+		</div>
+		<form class="d-flex" id="search-form">
+        	<button class="btn btn-outline-light bg-primary mx-auto" type="submit">Buscar</button>
+    	</form>
+    	<div class="d-flex justify-content-center pb-2 mt-2">
+	    	<div class="spinner-border text-primary visually-hidden" role="status" id="loading">
+			  <span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+	</div>
+	<br>
+	<!--Tabla, sin rows rellenadas porque se hace en la busqueda-->
+    <div class="container">
+	  <table class="table table-default border border-3 res" id="tabla">
+	    <thead>
+	    	<tr>
+	    		<th></th>
+	    		<th>Nombre</th>
+	    		<th>Tipo/s</th>
+	    		<th></th>
+	    		<th>HP</th>
+	    		<th>Ataque</th>
+	    		<th>Defensa</th>
+	    		<th>Ataque Esp.</th>
+	    		<th>Defensa Esp.</th>
+	    		<th>Velocidad</th>
+	    	</tr>
+	    </thead>
+	    <tbody id="data" style="border-collapse: collapse;">
+	    </tbody>
+	  </table>
+	</div>
+	<nav aria-label="Page navigation" class="pag" id="pagination">
+	  <ul class="pagination justify-content-center">
+	    <li class="page-item" id="previous">
+	    	<form class="d-flex" id="previous-form">
+	    		<button class="btn btn-outline-light bg-primary disabled" id="btn-previous" type="submit">Previous</button>
+    		</form>  
+	    </li>
+	    <li class="page-item" id="next">
+	    	<form class="d-flex" id="next-form">
+	      		<button class="btn btn-outlines-light bg-primary" id="btn-next" type="submit">Next</button>
+	      	</form>
+	    </li>
+	  </ul>
+	</nav>
+
+	<script src="js/search_alt.js"></script>
+</body>
+</html>
