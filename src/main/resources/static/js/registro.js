@@ -41,7 +41,13 @@ const validateForm = async () => {
         return false;
     }
 
-  let newsletter = $("#adsCheck").val();
+  let newsletter = "null"
+  let newsletterCheck = $("#adsCheck").val();
+  if(newsletterCheck) {
+    newsletter = "true";
+  } else {
+    newsletter = "false";
+  }
 
   let request = await fetch("/usuario", {
     method: "POST",
@@ -62,7 +68,7 @@ const validateForm = async () => {
 
   if (request.ok) {
     alert("Datos enviados");
-    console.log(await request.json());
+    console.log(request.json());
   }
 }
 

@@ -6,9 +6,9 @@ public class Usuario {
     private String email;
     private String user;
     private String password;
-    private Boolean newsletter;
+    private String newsletter;
 
-    public Usuario(String firstname, String lastname, String email, String user, String password, Boolean newsletter) {
+    public Usuario(String firstname, String lastname, String email, String user, String password, String newsletter) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
@@ -57,11 +57,11 @@ public class Usuario {
         this.password = password;
     }
 
-    public Boolean getNewsletter() {
+    public String getNewsletter() {
         return newsletter;
     }
 
-    public void setNewsletter(Boolean newsletter) {
+    public void setNewsletter(String newsletter) {
         this.newsletter = newsletter;
     }
 
