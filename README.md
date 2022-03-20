@@ -2,7 +2,7 @@
 En esta práctica se ha ampliado la funcionalidad del documento web de la práctica 4. Se podrá hacer un registro de usuario, y consultar los datos de registro
 
 # Link a gitpod
-https://gitpod.io/#https://github.com/Menendez6/PAT5
+
 
 # Objetivo de la práctica
 
