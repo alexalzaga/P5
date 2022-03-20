@@ -1,3 +1,5 @@
+const btnMostrar = document.getElementById("btn-go");
+
 const validateForm = async () => {
 
   let firstName = $("#inputNombre").val();
@@ -75,4 +77,9 @@ const validateForm = async () => {
 $("#btn-submit").on("click", () => {
   event.preventDefault();
   validateForm();
+  mostrarBoton();
 });
+
+function mostrarBoton() {
+    btnMostrar.classList.remove("visually-hidden");
+}
