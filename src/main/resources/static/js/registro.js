@@ -44,7 +44,7 @@ const validateForm = async () => {
     }
 
   let newsletter = "null"
-  let newsletterCheck = document.getElementById("adsCheck").checked();
+  let newsletterCheck = document.getElementById("adsCheck").checked;
   if(newsletterCheck) {
     newsletter = "true";
   } else {
