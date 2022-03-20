@@ -73,5 +73,6 @@ const validateForm = async () => {
 }
 
 $("#btn-submit").on("click", () => {
+  event.preventDefault();
   validateForm();
 });

@@ -6,13 +6,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 public class UsuarioController {
+
+    private static Usuario usuarioReg = new Usuario(null,null,null,null,null,null);
     @GetMapping("/usuario")
     public String getUsuario() {
-        return "Ejecutado con exito";
+        return usuarioReg.toString();
     }
 
     @PostMapping("/usuario")
     public Usuario postUsuario(@RequestBody Usuario usuario){
+        usuarioReg = usuario;
         return usuario;
     }
 }
